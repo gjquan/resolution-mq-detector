@@ -17,13 +17,16 @@ So how do you know what resolution or pixel ratio a device will report? Here are
 getres() is used to find a device's -webkit-device-pixel-ratio or resolution in dppx. It takes three arguments: (1) the min- version of the media query keyword, (2) the type or unit of the values being tested, and (3) an array of values to test, sorted in descending order. It returns the matching media query with units, or false if the browser doesn't support the query.
 
 Example: testing resolution as dppx with values between 1 and 3
+
 values = [3,2.9,2.8,2.7,2.6,2.5,2.4,2.3,2.2,2.1,2,1.9,1.8,1.7,1.6,1.5,1.4,1.3,1.2,1];
+
 result = getres('min-resolution', 'dppx', values); 
 
 
 getdpi() returns a device's resolution in dpi units. It takes two arguments, a minimum dpi and a maximum dpi, to search between. It returns the browser's reported dpi or false if the browser doesn't support the min-resolution media query with dpi units.
 
 Example: search for dpi results between 96 and 500dpi
+
 result = getdpi(96, 500);
 
 ##Notes
